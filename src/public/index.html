@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 
 <head>
   <meta charset="utf-8">
@@ -15,6 +15,16 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Angular App -->
+  <script src="app.js"></script>
+
+  <!-- Angular Controllers -->
+  <script src="login/login.controller.js"></script>
+  <script src="register/register.controller.js"></script>
+
+  <!-- Angular Services -->
+  <script src="services/flash.service.js"></script>
 
 </head>
 
@@ -36,6 +46,8 @@
 
   <div class="jumbotron">
     <div class="container">
+      <div ng-view></div>
+      <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message"></div>
     </div>
   </div>
 
