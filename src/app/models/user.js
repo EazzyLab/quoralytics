@@ -7,7 +7,7 @@ const saltRounds = 10;
 
 var UserSchema = new Schema({
   username : {type : String, required : true, index : {unique : true }},
-  password : {type : String, required : true, select : false},
+  password : {type : String, required : true},
   quoraUsername : {type : String, required : true},
   totalViews  : {type : Number}
 });
@@ -32,7 +32,7 @@ UserSchema.pre('save', function(next){
 
 });
 
-UserSchema.method.comparePassword = function(password){
+UserSchema.methods.comparePassword = function(password){
   var user = this;
   return  bcrypt.compareSync(password, user.password);
 };
