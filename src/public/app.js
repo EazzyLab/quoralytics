@@ -16,11 +16,11 @@
         templateUrl : 'register/register.view.html',
         controllerAs  : 'vm'
       })
-      // .when('/dashboard', {
-      //   controller  : 'DashboardController',
-      //   templateUrl : 'dashboard/dashboard.view.html',
-      //   controllerAs  : 'vm'
-      // })
+      .when('/dashboard', {
+        controller  : 'DashboardController',
+        templateUrl : 'dashboard/dashboard.view.html',
+        controllerAs  : 'vm'
+      })
 
       .otherwise({redirectTo : '/login'});
 

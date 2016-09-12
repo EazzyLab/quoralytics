@@ -1,0 +1,120 @@
+<style>
+.glyphicon.glyphicon-eye-open {
+  font-size: 30px;
+}
+.glyphicon.glyphicon-user {
+  font-size: 30px;
+}
+</style>
+<div class="container">
+
+<div class="col-md-4">
+  <div class="panel panel-success">
+    <div class="panel-heading">
+    <span class="glyphicon glyphicon-eye-open text-primary" style="vertical-align:-9px"></span><b>  Total Views</b>
+    </div>
+    <div class="panel-body text-center">
+      <p>{{vm.totalViews}}<span class="text-success"> {{vm.totalViewsChange}}</span> </p>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4">
+  <div class="panel panel-success">
+    <div class="panel-heading"><span class="glyphicon glyphicon-user text-info" style="vertical-align:-9px"></span><b>  Followers</b></div>
+    <div class="panel-body text-center">
+      <p>1,304 <span class="text-danger">-23</span></p>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4">
+  <div class="panel panel-success">
+    <div class="panel-heading"><span class="glyphicon glyphicon-user text-danger" style="vertical-align:-9px"></span><b>  Following</b></div>
+    <div class="panel-body text-center">
+      <p>324 <span class="text-primary">+0</span></p>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6">
+  <button ng-click="vm.updateStats()" type="button" class="btn btn-default">UpdateStats</button>
+</div>
+
+<div class="col-md-6">
+  <div class="panel panel-default">
+    <div class="panel-heading">Top 5 answers</div>
+      <table class="table">
+        <tr>
+          <th>Question answered</th>
+          <th>Upvotes</th>
+          <th>Views</th>
+        </tr>
+        <tr>
+          <td><a href="">Can babies fly ?</a></td>
+          <td>5432</td>
+          <td>34,323</td>
+        </tr>
+        <tr>
+          <td><a href="">Can babies fly ?</a></td>
+          <td>5432</td>
+          <td>34,323</td>
+        </tr>
+        <tr>
+          <td><a href="">Can babies fly ?</a></td>
+          <td>5432</td>
+          <td>34,323</td>
+        </tr>
+        <tr>
+          <td><a href="">Can babies fly ?</a></td>
+          <td>5432</td>
+          <td>34,323</td>
+        </tr>
+        <tr>
+          <td><a href="">Can babies fly ?</a></td>
+          <td>5432</td>
+          <td>34,323</td>
+        </tr>
+      </table>
+  </div>
+</div>
+
+<div class="col-md-6">
+  <div class="panel panel-default">
+    <div class="panel-heading">Top 5 questions</div>
+      <table class="table">
+        <tr>
+          <th>Question</th>
+          <th>Followers</th>
+          <th>Views</th>
+        </tr>
+        <tr>
+          <td><a href="">Can babies fly ?</a></td>
+          <td>5432</td>
+          <td>34,323</td>
+        </tr>
+        <tr>
+          <td><a href="">Can babies fly ?</a></td>
+          <td>5432</td>
+          <td>34,323</td>
+        </tr>
+        <tr>
+          <td><a href="">Can babies fly ?</a></td>
+          <td>5432</td>
+          <td>34,323</td>
+        </tr>
+        <tr>
+          <td><a href="">Can babies fly ?</a></td>
+          <td>5432</td>
+          <td>34,323</td>
+        </tr>
+        <tr>
+          <td><a href="">Can babies fly ?</a></td>
+          <td>5432</td>
+          <td>34,323</td>
+        </tr>
+      </table>
+  </div>
+</div>
+
+</div>
