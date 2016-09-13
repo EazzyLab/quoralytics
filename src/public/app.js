@@ -19,7 +19,7 @@
       .when('/dashboard', {
         controller  : 'DashboardController',
         templateUrl : 'dashboard/dashboard.view.html',
-        controllerAs  : 'vm'
+        controllerAs  : 'vm',
       })
 
       .otherwise({redirectTo : '/login'});
@@ -30,6 +30,7 @@
 
   .factory('authInterceptor', function($rootScope, $q, $location, AuthTokenService){
   return {
+
     //Add JWT to headers
     request: function(config){
       config.headers = config.headers || {};
