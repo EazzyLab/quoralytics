@@ -26,6 +26,10 @@
 
   <!-- Angular Services -->
   <script src="services/flash.service.js"></script>
+  <script src="services/authtoken.service.js"></script>
+  <script src="services/user.service.js"></script>
+  <script src="services/authentication.service.js"></script>
+  <script src="services/quora.service.js"></script>
 
 </head>
 
@@ -47,8 +51,8 @@
 
   <div class="jumbotron">
     <div class="container">
-      <div ng-view></div>
       <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message"></div>
+      <div ng-view></div>
     </div>
   </div>
 
