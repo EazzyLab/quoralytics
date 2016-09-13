@@ -11,11 +11,11 @@
 
     vm.updateStats = updateStats;
 
-    initController();
-
-    function initController(){
-      updateStats()
-    }
+    // initController();
+    //
+    // function initController(){
+    //   updateStats()
+    // }
 
     function updateStats(){
       QuoraService.UpdateStats()
