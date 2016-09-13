@@ -24,6 +24,33 @@
 
       .otherwise({redirectTo : '/login'});
 
+      $httpProvider.interceptors.push('authInterceptor');
+
   })
+
+  .factory('authInterceptor', function($rootScope, $q, $location, AuthTokenService){
+  return {
+    //Add JWT to headers
+    request: function(config){
+      config.headers = config.headers || {};
+      var token = AuthTokenService.GetToken();
+      if(token){
+        config.headers['x-access-token'] = token;
+        console.log('Injecting token');
+      }
+      return config;
+    },
+
+    //Intercept 403 and redirect to login
+    responseError: function(response){
+      if(response.status == 403){
+        AuthTokenService.ClearToken();
+        $location.path('/login');
+        return $q.reject(response);
+      }
+      return $q.reject(response);
+    }
+  }
+})
 
 })();
